@@ -522,13 +522,19 @@ with chart_col2:
             "Total": [successful_engagement_rows, non_billable_total_rows],
         }
     )
-    fig_pie_1 = px.pie(
-        billable_nonbillable,
-        names="Category",
-        values="Total",
-        title="Billable Services vs Non-Billable Services",
-        hole=0.35,
-    )
+fig_pie_2 = px.pie(
+    caseload_outcome,
+    names="Category",
+    values="Total",
+    title="Successful Engagement vs Attempts Only vs No Attempts",
+    hole=0.35,
+    color="Category",
+    color_discrete_map={
+        "Successful Engagement": "#7BAE7F",
+        "Attempts Only": "#E6B566",
+        "No Attempts": "#C97B7B",
+    },
+)
     st.plotly_chart(fig_pie_1, use_container_width=True)
 
 st.markdown("### Caseload Engagement Outcome")
