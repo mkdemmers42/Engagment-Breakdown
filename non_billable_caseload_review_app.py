@@ -436,6 +436,37 @@ no_engagement_list["Flag"] = "Client appears on caseload file but not on MyServi
 no_engagement_list = safe_cols(no_engagement_list, ["Client Name", "Last DOS", "Last Seen by Me", "Category", "Flag"])
 
 # ----------------------------
+# Employee Review Header
+# ----------------------------
+review_employee = "Unknown Employee"
+if "Staff" in ms_df.columns and not ms_df["Staff"].dropna().empty:
+    review_employee = str(ms_df["Staff"].dropna().iloc[0]).strip()
+
+audit_start = ""
+audit_end = ""
+if not ms_df["DateOfService"].dropna().empty:
+    audit_start = ms_df["DateOfService"].min().strftime("%m/%d/%Y")
+    audit_end = ms_df["DateOfService"].max().strftime("%m/%d/%Y")
+
+st.markdown(
+    f"""
+    <div style="
+        background: rgba(15,23,42,.45);
+        border: 1px solid rgba(148,163,184,.22);
+        padding: 14px 18px;
+        border-radius: 16px;
+        margin-bottom: 18px;
+        color: #e2e8f0;
+        font-size: 16px;
+        ">
+        <b>Reviewing Employee:</b> {review_employee}<br>
+        <b>Audit Period:</b> {audit_start} - {audit_end}
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# ----------------------------
 # Dashboard Metrics
 # ----------------------------
 st.markdown("## Executive KPI Summary")
