@@ -253,6 +253,16 @@ div[data-testid="stFileUploader"] span {
     font-weight: 700 !important;
 }
 
+div[data-testid="stFileUploader"] button {
+    color: black !important;
+    font-weight: 700 !important;
+}
+
+div[data-testid="stFileUploader"] button svg {
+    fill: black !important;
+    color: black !important;
+}
+
     h2, h3 {
         color: #f8fafc;
         letter-spacing: -.01em;
