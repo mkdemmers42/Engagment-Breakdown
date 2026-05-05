@@ -694,15 +694,66 @@ with chart_col1:
         text="Total",
         title="All Service Procedures Performed",
     )
+    kpi_bar_colors = [
+    "rgba(96, 165, 250, 0.28)",   # blue
+    "rgba(129, 140, 248, 0.28)",  # indigo
+    "rgba(45, 212, 191, 0.28)",   # teal
+    "rgba(74, 222, 128, 0.28)",   # green
+    "rgba(251, 146, 60, 0.28)",   # orange
+    "rgba(251, 113, 133, 0.28)",  # rose
+    "rgba(248, 113, 113, 0.28)",  # red
+]
+
+kpi_bar_lines = [
+    "rgba(96, 165, 250, 0.95)",
+    "rgba(129, 140, 248, 0.95)",
+    "rgba(45, 212, 191, 0.95)",
+    "rgba(74, 222, 128, 0.95)",
+    "rgba(251, 146, 60, 0.95)",
+    "rgba(251, 113, 133, 0.95)",
+    "rgba(248, 113, 113, 0.95)",
+]
+
+bar_fill_colors = [
+    kpi_bar_colors[i % len(kpi_bar_colors)]
+    for i in range(len(procedure_counts))
+]
+
+bar_line_colors = [
+    kpi_bar_lines[i % len(kpi_bar_lines)]
+    for i in range(len(procedure_counts))
+]
+
+fig_bar.update_traces(
+    marker=dict(
+        color=bar_fill_colors,
+        line=dict(color=bar_line_colors, width=2.5),
+    ),
+    textfont=dict(color="#f8fafc", size=14),
+    textposition="outside",
+    cliponaxis=False,
+)
     fig_bar.update_layout(
-        xaxis_tickangle=-35,
-        height=520,
-        showlegend=False,
-        paper_bgcolor="rgba(0,0,0,0)",
-        plot_bgcolor="rgba(15,23,42,.20)",
-        font=dict(color="#e5e7eb"),
-        title_font=dict(color="#f8fafc"),
-    )
+    xaxis_tickangle=-35,
+    height=540,
+    showlegend=False,
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(15,23,42,.10)",
+    font=dict(color="#e5e7eb"),
+    title_font=dict(color="#f8fafc"),
+    margin=dict(t=70, b=130, l=55, r=35),
+    xaxis=dict(
+        showgrid=False,
+        linecolor="rgba(148,163,184,.35)",
+        tickfont=dict(color="#dbeafe", size=12),
+    ),
+    yaxis=dict(
+        showgrid=True,
+        gridcolor="rgba(148,163,184,.12)",
+        linecolor="rgba(148,163,184,.25)",
+        tickfont=dict(color="#dbeafe", size=12),
+    ),
+)
     st.plotly_chart(fig_bar, use_container_width=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
