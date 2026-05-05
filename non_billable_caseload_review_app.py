@@ -968,15 +968,15 @@ styled_selected_df = selected_df.style.set_properties(
     **{
         "background-color": "#1e293b",
         "color": "#dbeafe",
-        "border-color": "#1e293b",
+        "border-color": "#334155",
     }
 ).set_table_styles(
     [
         {
             "selector": "thead th",
             "props": [
-                ("background-color", "#1e293b"),
-                ("color", "000000"),
+                ("background-color", "#cbd5e1"),
+                ("color", "#000000"),
                 ("font-weight", "800"),
             ],
         },
