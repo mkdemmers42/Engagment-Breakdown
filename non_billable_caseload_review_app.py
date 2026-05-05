@@ -868,7 +868,7 @@ fig_pie_2 = px.pie(
     caseload_outcome,
     names="Category",
     values="Total",
-    title="Percentages are Based on the Caseload You Uploaded",
+    title="Percentages are Based on the Caseload You Uploaded.  Use most recent caseload for more accurrate results.",
     hole=0.48,
     color="Category",
     color_discrete_map={
