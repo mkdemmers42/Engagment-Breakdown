@@ -830,19 +830,20 @@ fig_pie_2 = px.pie(
 )
 
 fig_pie_2.update_traces(
-    textfont=dict(color="#f8fafc", size=14),
+    textfont=dict(color="#f8fafc", size=17),
     marker=dict(
         line=dict(color="rgba(226,232,240,0.55)", width=2.5)
     )
 )
 
 fig_pie_2.update_layout(
-    height=500,
+    height=650,
     paper_bgcolor="rgba(0,0,0,0)",
     plot_bgcolor="rgba(0,0,0,0)",
     font=dict(color="#e5e7eb"),
     title_font=dict(color="#f8fafc"),
-    legend=dict(font=dict(color="#dbeafe")),
+    margin=dict(t=70, b=40, l=40, r=40),
+    legend=dict(font=dict(color="#dbeafe", size=15)),
 )
 
 st.plotly_chart(fig_pie_2, use_container_width=True)
