@@ -253,14 +253,16 @@ div[data-testid="stFileUploader"] span {
     font-weight: 700 !important;
 }
 
-div[data-testid="stFileUploader"] button {
-    color: black !important;
+div[data-testid="stFileUploader"] section button {
+    color: #111827 !important;
     font-weight: 700 !important;
+    background: #e2e8f0 !important;
+    border: 1px solid #cbd5e1 !important;
 }
 
-div[data-testid="stFileUploader"] button svg {
-    fill: black !important;
-    color: black !important;
+div[data-testid="stFileUploader"] section button svg {
+    fill: #111827 !important;
+    color: #111827 !important;
 }
 
     h2, h3 {
