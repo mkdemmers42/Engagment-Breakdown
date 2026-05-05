@@ -826,7 +826,7 @@ with chart_col2:
         billable_nonbillable,
         names="Category",
         values="Total",
-        title="Billable Services vs Non-Billable Services",
+        title="Percentages Represent Rendered Services Only",
         hole=0.48,
         color="Category",
         color_discrete_map={
