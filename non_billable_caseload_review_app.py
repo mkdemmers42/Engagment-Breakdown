@@ -629,8 +629,12 @@ if "DateOfService" in ms_df.columns and not ms_df["DateOfService"].dropna().empt
 st.markdown(
     f"""
     <div class="review-header">
-        <b>Reviewing Employee:</b> {review_employee}<br>
-        <b>Audit Period:</b> {audit_start} - {audit_end}
+        <span style="font-size:20px; font-weight:800; color:#f8fafc;">
+            Employee: {review_employee}
+        </span>
+        <span style="margin-left:40px; font-size:20px; font-weight:800; color:#dbeafe;">
+            Audit Period: {audit_start} - {audit_end}
+        </span>
     </div>
     """,
     unsafe_allow_html=True
