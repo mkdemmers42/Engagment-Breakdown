@@ -907,8 +907,47 @@ view_map = {
 }
 
 selected_df = view_map[st.session_state.selected_view]
-st.markdown(f"### {st.session_state.selected_view}")
-st.dataframe(selected_df, use_container_width=True, hide_index=True)
+
+st.markdown(
+    f"""
+    <div class="section-box">
+        <div style="
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            margin-bottom:14px;
+        ">
+            <div style="
+                font-size:26px;
+                font-weight:900;
+                color:#f8fafc;
+            ">
+                {st.session_state.selected_view} Review List
+            </div>
+            <div style="
+                padding:8px 14px;
+                border-radius:999px;
+                border:1px solid rgba(96,165,250,.35);
+                background:rgba(59,130,246,.12);
+                color:#dbeafe;
+                font-weight:800;
+                font-size:15px;
+            ">
+                {len(selected_df):,} Records
+            </div>
+        </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.dataframe(
+    selected_df,
+    use_container_width=True,
+    hide_index=True,
+    height=430,
+)
+
+st.markdown("</div>", unsafe_allow_html=True)
 
 download_col, print_col = st.columns(2)
 with download_col:
