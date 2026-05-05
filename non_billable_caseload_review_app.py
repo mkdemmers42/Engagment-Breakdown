@@ -789,7 +789,7 @@ with chart_col2:
     fig_pie_1.update_traces(
         textfont=dict(color="#f8fafc", size=14),
         marker=dict(
-            line=dict(color="rgba(15,23,42,0.95)", width=3)
+            line=dict(color="rgba(226,232,240,0.55)", width=2.5)
         )
     )
 
@@ -823,16 +823,16 @@ fig_pie_2 = px.pie(
     hole=0.48,
     color="Category",
     color_discrete_map={
-        "Successful Engagement": "rgba(45, 212, 191, 0.82)",
-        "Attempts Only": "rgba(251, 146, 60, 0.82)",
-        "No Attempts": "rgba(251, 113, 133, 0.82)",
+        "Successful Engagement": "rgba(45, 212, 191, 0.42)",
+"Attempts Only": "rgba(251, 146, 60, 0.42)",
+"No Attempts": "rgba(251, 113, 133, 0.42)",
     },
 )
 
 fig_pie_2.update_traces(
     textfont=dict(color="#f8fafc", size=14),
     marker=dict(
-        line=dict(color="rgba(15,23,42,0.95)", width=3)
+        line=dict(color="rgba(226,232,240,0.55)", width=2.5)
     )
 )
 
