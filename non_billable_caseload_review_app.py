@@ -626,7 +626,7 @@ for client_key, client_rows in ms_df.groupby("ClientKey"):
 
 no_engagement_clients = sorted(caseload_clients - all_ms_clients)
 
-attempt_only_count = len(set(attempt_only_clients))
+attempt_only_count = len(set(attempt_only_clients) & caseload_clients)
 no_engagement_count = len(no_engagement_clients)
 successful_client_count = len(successful_clients & caseload_clients) if caseload_clients else len(successful_clients)
 
