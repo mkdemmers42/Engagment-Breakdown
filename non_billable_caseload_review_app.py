@@ -765,50 +765,56 @@ with chart_col1:
 with chart_col2:
     st.markdown('<div class="chart-panel">', unsafe_allow_html=True)
     st.markdown("### Billable Services vs Non-Billable")
+
     billable_nonbillable = pd.DataFrame(
         {
             "Category": ["Billable Services", "Non-Billable Services"],
             "Total": [successful_engagement_rows, non_billable_total_rows],
         }
-    fig_pie_1 = px.pie(
-    billable_nonbillable,
-    names="Category",
-    values="Total",
-    title="Billable Services vs Non-Billable Services",
-    hole=0.48,
-    color="Category",
-    color_discrete_map={
-        "Billable Services": "rgba(45, 212, 191, 0.82)",
-        "Non-Billable Services": "rgba(74, 222, 128, 0.82)",
-    },
-)
-
-fig_pie_1.update_traces(
-    textfont=dict(color="#f8fafc", size=14),
-    marker=dict(
-        line=dict(color="rgba(15,23,42,0.95)", width=3)
     )
-)
 
-fig_pie_1.update_layout(
-    height=520,
-    paper_bgcolor="rgba(0,0,0,0)",
-    plot_bgcolor="rgba(0,0,0,0)",
-    font=dict(color="#e5e7eb"),
-    title_font=dict(color="#f8fafc"),
-    legend=dict(font=dict(color="#dbeafe")),
-)
+    fig_pie_1 = px.pie(
+        billable_nonbillable,
+        names="Category",
+        values="Total",
+        title="Billable Services vs Non-Billable Services",
+        hole=0.48,
+        color="Category",
+        color_discrete_map={
+            "Billable Services": "rgba(45, 212, 191, 0.82)",
+            "Non-Billable Services": "rgba(74, 222, 128, 0.82)",
+        },
+    )
+
+    fig_pie_1.update_traces(
+        textfont=dict(color="#f8fafc", size=14),
+        marker=dict(
+            line=dict(color="rgba(15,23,42,0.95)", width=3)
+        )
+    )
+
+    fig_pie_1.update_layout(
+        height=520,
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font=dict(color="#e5e7eb"),
+        title_font=dict(color="#f8fafc"),
+        legend=dict(font=dict(color="#dbeafe")),
+    )
+
     st.plotly_chart(fig_pie_1, use_container_width=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
 st.markdown('<div class="chart-panel">', unsafe_allow_html=True)
 st.markdown("### Caseload Engagement Outcome")
+
 caseload_outcome = pd.DataFrame(
     {
         "Category": ["Successful Engagement", "Attempts Only", "No Attempts"],
         "Total": [successful_client_count, attempt_only_count, no_engagement_count],
     }
 )
+
 fig_pie_2 = px.pie(
     caseload_outcome,
     names="Category",
@@ -838,6 +844,7 @@ fig_pie_2.update_layout(
     title_font=dict(color="#f8fafc"),
     legend=dict(font=dict(color="#dbeafe")),
 )
+
 st.plotly_chart(fig_pie_2, use_container_width=True)
 st.markdown("</div>", unsafe_allow_html=True)
 
