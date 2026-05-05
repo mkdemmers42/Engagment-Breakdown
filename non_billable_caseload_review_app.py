@@ -199,10 +199,34 @@ st.markdown(
     }
 
     div[data-testid="stDataFrame"] {
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid rgba(148, 163, 184, .20);
-    }
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(96, 165, 250, .20);
+    background: rgba(15, 23, 42, .72) !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,.22);
+}
+
+div[data-testid="stDataFrame"] [data-testid="stDataFrameResizable"] {
+    background: rgba(15, 23, 42, .72) !important;
+}
+
+div[data-testid="stDataFrame"] div[role="grid"] {
+    background: rgba(15, 23, 42, .72) !important;
+    color: #e5e7eb !important;
+}
+
+div[data-testid="stDataFrame"] div[role="columnheader"] {
+    background: rgba(30, 41, 59, .95) !important;
+    color: #f8fafc !important;
+    font-weight: 800 !important;
+    border-bottom: 1px solid rgba(96,165,250,.18) !important;
+}
+
+div[data-testid="stDataFrame"] div[role="gridcell"] {
+    background: rgba(15, 23, 42, .72) !important;
+    color: #dbeafe !important;
+    border-color: rgba(148,163,184,.08) !important;
+}
 
     .stButton > button {
     border-radius: 18px;
