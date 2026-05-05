@@ -973,13 +973,14 @@ styled_selected_df = selected_df.style.set_properties(
 ).set_table_styles(
     [
         {
-            "selector": "thead th",
-            "props": [
-                ("background-color", "#cbd5e1"),
-                ("color", "#000000"),
-                ("font-weight", "800"),
-            ],
-        },
+    "selector": "thead th",
+    "props": [
+        ("background-color", "#cbd5e1"),
+        ("color", "#000000 !important"),
+        ("font-weight", "800"),
+        ("text-align", "left"),
+    ],
+},
         {
             "selector": "tbody tr:nth-child(even)",
             "props": [("background-color", "#334155")],
