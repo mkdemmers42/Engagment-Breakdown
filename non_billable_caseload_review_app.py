@@ -628,11 +628,17 @@ if "DateOfService" in ms_df.columns and not ms_df["DateOfService"].dropna().empt
 # ----------------------------
 st.markdown(
     f"""
-    <div class="review-header">
+    <div class="review-header" style="
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:50px;
+        text-align:center;
+        ">
         <span style="font-size:20px; font-weight:800; color:#f8fafc;">
             Employee: {review_employee}
         </span>
-        <span style="margin-left:40px; font-size:20px; font-weight:800; color:#dbeafe;">
+        <span style="font-size:20px; font-weight:800; color:#dbeafe;">
             Audit Period: {audit_start} - {audit_end}
         </span>
     </div>
