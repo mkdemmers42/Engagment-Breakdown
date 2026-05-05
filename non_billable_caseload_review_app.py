@@ -94,7 +94,7 @@ st.markdown(
             linear-gradient(135deg, rgba(15, 23, 42, .92), rgba(30, 41, 59, .78));
         box-shadow:
             0 0 0 1px var(--outline),
-            0 0 24px var(--glow),
+            0 0 12px var(--glow),
             0 14px 30px rgba(0,0,0,.30);
     }
 
