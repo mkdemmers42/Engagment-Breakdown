@@ -632,13 +632,14 @@ st.markdown(
         display:flex;
         justify-content:center;
         align-items:center;
-        gap:50px;
+        gap:65px;
         text-align:center;
+        padding:24px 20px;
         ">
-        <span style="font-size:20px; font-weight:800; color:#f8fafc;">
+        <span style="font-size:28px; font-weight:900; color:#f8fafc;">
             Employee: {review_employee}
         </span>
-        <span style="font-size:20px; font-weight:800; color:#dbeafe;">
+        <span style="font-size:28px; font-weight:900; color:#dbeafe;">
             Audit Period: {audit_start} - {audit_end}
         </span>
     </div>
