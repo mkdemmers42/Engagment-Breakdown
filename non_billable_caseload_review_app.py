@@ -607,6 +607,8 @@ with kpi_top[2]:
 with kpi_top[3]:
     metric_card("Non-Billable Services Rendered", f"{non_billable_total_rows:,}", "📝", "metric-green")
 
+st.markdown("<div style='height:18px;'></div>", unsafe_allow_html=True)
+
 kpi_bottom = st.columns(3)
 with kpi_bottom[0]:
     metric_card("Attempts Only", f"{attempt_only_count:,}", "📞", "metric-orange")
