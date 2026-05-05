@@ -343,7 +343,7 @@ NON_BILLABLE_BASE_CODES = {
 ATTEMPT_STATUSES = {"No Show", "Cancel"}
 
 DISPLAY_COLUMNS = [
-    "ClientName",
+    "Client Name",
     "DateOfService",
     "ProcedureBase",
     "ProcedureCodeName",
