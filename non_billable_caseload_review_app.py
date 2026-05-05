@@ -220,12 +220,24 @@ st.markdown(
         box-shadow: 0 0 20px rgba(59, 130, 246, .28);
     }
 
-    div[data-testid="stFileUploader"] {
-        background: rgba(15, 23, 42, .50);
-        border: 1px solid rgba(96, 165, 250, .25);
-        border-radius: 18px;
-        padding: .75rem;
-    }
+div[data-testid="stFileUploader"] {
+    background: rgba(15, 23, 42, .72);
+    border: 1px solid rgba(59, 130, 246, .35);
+    border-radius: 18px;
+    padding: .85rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,.20);
+}
+
+div[data-testid="stFileUploader"] section {
+    background: rgba(30, 41, 59, .88) !important;
+    border: 1px dashed rgba(96, 165, 250, .35) !important;
+    border-radius: 14px !important;
+}
+
+div[data-testid="stFileUploader"] section:hover {
+    border: 1px dashed rgba(147, 197, 253, .65) !important;
+    background: rgba(51, 65, 85, .92) !important;
+}
 
     h2, h3 {
         color: #f8fafc;
