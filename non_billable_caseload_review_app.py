@@ -781,8 +781,8 @@ with chart_col2:
         hole=0.48,
         color="Category",
         color_discrete_map={
-            "Billable Services": "rgba(45, 212, 191, 0.82)",
-            "Non-Billable Services": "rgba(74, 222, 128, 0.82)",
+            "Billable Services": "rgba(45, 212, 191, 0.42)",
+"Non-Billable Services": "rgba(74, 222, 128, 0.42)",
         },
     )
 
