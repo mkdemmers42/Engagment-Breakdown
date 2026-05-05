@@ -229,6 +229,61 @@ st.markdown(
     transform: translateY(-1px);
 }
 
+div.stButton.success-btn > button {
+    border: 1px solid rgba(74, 222, 128, .40);
+    background:
+        radial-gradient(circle at center, rgba(34, 197, 94, .16), transparent 62%),
+        linear-gradient(135deg, rgba(15, 23, 42, .88), rgba(30, 41, 59, .72));
+    box-shadow:
+        0 0 0 1px rgba(74, 222, 128, .24),
+        0 0 12px rgba(34, 197, 94, .22),
+        0 10px 22px rgba(0,0,0,.26);
+}
+
+div.stButton.teal-btn > button {
+    border: 1px solid rgba(45, 212, 191, .40);
+    background:
+        radial-gradient(circle at center, rgba(20, 184, 166, .16), transparent 62%),
+        linear-gradient(135deg, rgba(15, 23, 42, .88), rgba(30, 41, 59, .72));
+    box-shadow:
+        0 0 0 1px rgba(45, 212, 191, .24),
+        0 0 12px rgba(20, 184, 166, .22),
+        0 10px 22px rgba(0,0,0,.26);
+}
+
+div.stButton.orange-btn > button {
+    border: 1px solid rgba(251, 146, 60, .42);
+    background:
+        radial-gradient(circle at center, rgba(249, 115, 22, .16), transparent 62%),
+        linear-gradient(135deg, rgba(15, 23, 42, .88), rgba(30, 41, 59, .72));
+    box-shadow:
+        0 0 0 1px rgba(251, 146, 60, .24),
+        0 0 12px rgba(249, 115, 22, .22),
+        0 10px 22px rgba(0,0,0,.26);
+}
+
+div.stButton.red-btn > button {
+    border: 1px solid rgba(248, 113, 113, .42);
+    background:
+        radial-gradient(circle at center, rgba(239, 68, 68, .16), transparent 62%),
+        linear-gradient(135deg, rgba(15, 23, 42, .88), rgba(30, 41, 59, .72));
+    box-shadow:
+        0 0 0 1px rgba(248, 113, 113, .24),
+        0 0 12px rgba(239, 68, 68, .22),
+        0 10px 22px rgba(0,0,0,.26);
+}
+
+div.stButton.rose-btn > button {
+    border: 1px solid rgba(251, 113, 133, .42);
+    background:
+        radial-gradient(circle at center, rgba(244, 63, 94, .16), transparent 62%),
+        linear-gradient(135deg, rgba(15, 23, 42, .88), rgba(30, 41, 59, .72));
+    box-shadow:
+        0 0 0 1px rgba(251, 113, 133, .24),
+        0 0 12px rgba(244, 63, 94, .22),
+        0 10px 22px rgba(0,0,0,.26);
+}
+
 .stDownloadButton > button {
     border-radius: 15px;
     border: 1px solid rgba(203, 213, 225, .34);
@@ -882,21 +937,36 @@ if "selected_view" not in st.session_state:
     st.session_state.selected_view = "Successful Engagements"
 
 button_cols = st.columns(5)
+
 with button_cols[0]:
-    if st.button("Successful Engagements", use_container_width=True):
+    st.markdown('<div class="stButton success-btn">', unsafe_allow_html=True)
+    if st.button("Successful Engagements", use_container_width=True, key="btn1"):
         st.session_state.selected_view = "Successful Engagements"
+    st.markdown('</div>', unsafe_allow_html=True)
+
 with button_cols[1]:
-    if st.button("Non-Billable Totals", use_container_width=True):
+    st.markdown('<div class="stButton teal-btn">', unsafe_allow_html=True)
+    if st.button("Non-Billable Totals", use_container_width=True, key="btn2"):
         st.session_state.selected_view = "Non-Billable Totals"
+    st.markdown('</div>', unsafe_allow_html=True)
+
 with button_cols[2]:
-    if st.button("Attempt Only / No Contact", use_container_width=True):
+    st.markdown('<div class="stButton orange-btn">', unsafe_allow_html=True)
+    if st.button("Attempt Only / No Contact", use_container_width=True, key="btn3"):
         st.session_state.selected_view = "Attempt Only / No Contact"
+    st.markdown('</div>', unsafe_allow_html=True)
+
 with button_cols[3]:
-    if st.button("No Show / Cancelled Appointments", use_container_width=True):
+    st.markdown('<div class="stButton red-btn">', unsafe_allow_html=True)
+    if st.button("No Show / Cancelled Appointments", use_container_width=True, key="btn4"):
         st.session_state.selected_view = "No Show / Cancelled Appointments"
+    st.markdown('</div>', unsafe_allow_html=True)
+
 with button_cols[4]:
-    if st.button("No Engagement / No Attempts", use_container_width=True):
+    st.markdown('<div class="stButton rose-btn">', unsafe_allow_html=True)
+    if st.button("No Engagement / No Attempts", use_container_width=True, key="btn5"):
         st.session_state.selected_view = "No Engagement / No Attempts"
+    st.markdown('</div>', unsafe_allow_html=True)
 
 view_map = {
     "Successful Engagements": successful_list,
