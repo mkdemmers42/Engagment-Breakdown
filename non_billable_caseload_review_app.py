@@ -743,7 +743,7 @@ with chart_col1:
         x="Procedure",
         y="Total",
         text="Total",
-        title="All Service Rendered Breakdown",
+        title="A Breakdonw of all Services Rendered",
     )
 
     kpi_bar_colors = [
