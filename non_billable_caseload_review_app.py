@@ -966,7 +966,7 @@ st.markdown(
 
 styled_selected_df = selected_df.style.set_properties(
     **{
-        "background-color": "#0f172a",
+        "background-color": "#1e293b",
         "color": "#dbeafe",
         "border-color": "#1e293b",
     }
@@ -976,13 +976,13 @@ styled_selected_df = selected_df.style.set_properties(
             "selector": "thead th",
             "props": [
                 ("background-color", "#1e293b"),
-                ("color", "#f8fafc"),
+                ("color", "000000"),
                 ("font-weight", "800"),
             ],
         },
         {
             "selector": "tbody tr:nth-child(even)",
-            "props": [("background-color", "#111827")],
+            "props": [("background-color", "#334155")],
         },
     ]
 )
