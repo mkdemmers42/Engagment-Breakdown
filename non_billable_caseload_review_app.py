@@ -964,8 +964,31 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+styled_selected_df = selected_df.style.set_properties(
+    **{
+        "background-color": "#0f172a",
+        "color": "#dbeafe",
+        "border-color": "#1e293b",
+    }
+).set_table_styles(
+    [
+        {
+            "selector": "thead th",
+            "props": [
+                ("background-color", "#1e293b"),
+                ("color", "#f8fafc"),
+                ("font-weight", "800"),
+            ],
+        },
+        {
+            "selector": "tbody tr:nth-child(even)",
+            "props": [("background-color", "#111827")],
+        },
+    ]
+)
+
 st.dataframe(
-    selected_df,
+    styled_selected_df,
     use_container_width=True,
     hide_index=True,
     height=430,
