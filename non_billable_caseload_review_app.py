@@ -254,15 +254,21 @@ div[data-testid="stFileUploader"] span {
 }
 
 div[data-testid="stFileUploader"] section button {
-    color: #111827 !important;
+    background: #d1d5db !important;
+    border: 1px solid #9ca3af !important;
+}
+
+div[data-testid="stFileUploader"] section button div,
+div[data-testid="stFileUploader"] section button span,
+div[data-testid="stFileUploader"] section button p {
+    color: #000000 !important;
+    fill: #000000 !important;
     font-weight: 700 !important;
-    background: #e2e8f0 !important;
-    border: 1px solid #cbd5e1 !important;
 }
 
 div[data-testid="stFileUploader"] section button svg {
-    fill: #111827 !important;
-    color: #111827 !important;
+    color: #000000 !important;
+    fill: #000000 !important;
 }
 
     h2, h3 {
