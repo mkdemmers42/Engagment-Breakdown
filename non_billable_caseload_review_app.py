@@ -733,7 +733,8 @@ fig_bar.update_traces(
     textposition="outside",
     cliponaxis=False,
 )
-    fig_bar.update_layout(
+
+fig_bar.update_layout(
     xaxis_tickangle=-35,
     height=540,
     showlegend=False,
