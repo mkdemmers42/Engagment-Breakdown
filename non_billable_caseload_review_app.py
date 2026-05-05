@@ -973,7 +973,7 @@ styled_selected_df = selected_df.style.set_properties(
 ).set_table_styles(
     [
         {
-    "selector": "thead th",
+    "selector": "th.col_heading",
     "props": [
         ("background-color", "#cbd5e1"),
         ("color", "#000000 !important"),
