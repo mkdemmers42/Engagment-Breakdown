@@ -729,7 +729,7 @@ st.markdown("## Dashboard Charts")
 chart_col1, chart_col2 = st.columns(2)
 with chart_col1:
     st.markdown('<div class="chart-panel">', unsafe_allow_html=True)
-    st.markdown("### Service Procedures Performed")
+    st.markdown("### Service Rendered Breakdown")
 
     procedure_counts = (
         ms_df["ProcedureBase"]
@@ -743,7 +743,7 @@ with chart_col1:
         x="Procedure",
         y="Total",
         text="Total",
-        title="All Service Procedures Performed",
+        title="All Service Rendered Breakdown",
     )
 
     kpi_bar_colors = [
