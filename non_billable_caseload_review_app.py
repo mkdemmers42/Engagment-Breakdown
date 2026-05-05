@@ -239,6 +239,20 @@ div[data-testid="stFileUploader"] section:hover {
     background: rgba(51, 65, 85, .92) !important;
 }
 
+div[data-testid="stFileUploader"] small {
+    color: #cbd5e1 !important;
+}
+
+div[data-testid="stFileUploader"] p {
+    color: #dbeafe !important;
+    font-weight: 600 !important;
+}
+
+div[data-testid="stFileUploader"] span {
+    color: #93c5fd !important;
+    font-weight: 700 !important;
+}
+
     h2, h3 {
         color: #f8fafc;
         letter-spacing: -.01em;
