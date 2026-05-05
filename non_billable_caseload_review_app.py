@@ -770,26 +770,34 @@ with chart_col2:
             "Category": ["Billable Services", "Non-Billable Services"],
             "Total": [successful_engagement_rows, non_billable_total_rows],
         }
-    )
     fig_pie_1 = px.pie(
-        billable_nonbillable,
-        names="Category",
-        values="Total",
-        title="Billable Services vs Non-Billable Services",
-        hole=0.35,
-        color="Category",
-        color_discrete_map={
-            "Billable Services": "#7BAE7F",
-            "Non-Billable Services": "#5FA8D3",
-        },
+    billable_nonbillable,
+    names="Category",
+    values="Total",
+    title="Billable Services vs Non-Billable Services",
+    hole=0.48,
+    color="Category",
+    color_discrete_map={
+        "Billable Services": "rgba(45, 212, 191, 0.82)",
+        "Non-Billable Services": "rgba(74, 222, 128, 0.82)",
+    },
+)
+
+fig_pie_1.update_traces(
+    textfont=dict(color="#f8fafc", size=14),
+    marker=dict(
+        line=dict(color="rgba(15,23,42,0.95)", width=3)
     )
-    fig_pie_1.update_layout(
-        height=520,
-        paper_bgcolor="rgba(0,0,0,0)",
-        font=dict(color="#e5e7eb"),
-        title_font=dict(color="#f8fafc"),
-        legend=dict(font=dict(color="#e5e7eb")),
-    )
+)
+
+fig_pie_1.update_layout(
+    height=520,
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    font=dict(color="#e5e7eb"),
+    title_font=dict(color="#f8fafc"),
+    legend=dict(font=dict(color="#dbeafe")),
+)
     st.plotly_chart(fig_pie_1, use_container_width=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
@@ -806,20 +814,29 @@ fig_pie_2 = px.pie(
     names="Category",
     values="Total",
     title="Successful Engagement vs Attempts Only vs No Attempts",
-    hole=0.35,
+    hole=0.48,
     color="Category",
     color_discrete_map={
-        "Successful Engagement": "#7BAE7F",
-        "Attempts Only": "#E6B566",
-        "No Attempts": "#C97B7B",
+        "Successful Engagement": "rgba(45, 212, 191, 0.82)",
+        "Attempts Only": "rgba(251, 146, 60, 0.82)",
+        "No Attempts": "rgba(251, 113, 133, 0.82)",
     },
 )
+
+fig_pie_2.update_traces(
+    textfont=dict(color="#f8fafc", size=14),
+    marker=dict(
+        line=dict(color="rgba(15,23,42,0.95)", width=3)
+    )
+)
+
 fig_pie_2.update_layout(
     height=500,
     paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
     font=dict(color="#e5e7eb"),
     title_font=dict(color="#f8fafc"),
-    legend=dict(font=dict(color="#e5e7eb")),
+    legend=dict(font=dict(color="#dbeafe")),
 )
 st.plotly_chart(fig_pie_2, use_container_width=True)
 st.markdown("</div>", unsafe_allow_html=True)
