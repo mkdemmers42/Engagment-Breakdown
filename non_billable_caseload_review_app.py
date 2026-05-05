@@ -204,21 +204,46 @@ st.markdown(
         border: 1px solid rgba(148, 163, 184, .20);
     }
 
-    .stButton > button, .stDownloadButton > button {
-        border-radius: 15px;
-        border: 1px solid rgba(203, 213, 225, .34);
-        background: linear-gradient(135deg, #334155, #1e293b);
-        color: white;
-        font-weight: 800;
-        min-height: 44px;
-        box-shadow: 0 8px 18px rgba(0,0,0,.20);
-    }
+    .stButton > button {
+    border-radius: 18px;
+    border: 1px solid rgba(96, 165, 250, .38);
+    background:
+        radial-gradient(circle at center, rgba(59, 130, 246, .14), transparent 62%),
+        linear-gradient(135deg, rgba(15, 23, 42, .88), rgba(30, 41, 59, .72));
+    color: #f8fafc;
+    font-weight: 900;
+    min-height: 58px;
+    box-shadow:
+        0 0 0 1px rgba(96, 165, 250, .24),
+        0 0 12px rgba(59, 130, 246, .22),
+        0 10px 22px rgba(0,0,0,.26);
+}
 
-    .stButton > button:hover, .stDownloadButton > button:hover {
-        border-color: #93c5fd;
-        color: white;
-        box-shadow: 0 0 20px rgba(59, 130, 246, .28);
-    }
+.stButton > button:hover {
+    border-color: rgba(147, 197, 253, .75);
+    color: #ffffff;
+    box-shadow:
+        0 0 0 1px rgba(147, 197, 253, .45),
+        0 0 18px rgba(59, 130, 246, .34),
+        0 12px 26px rgba(0,0,0,.30);
+    transform: translateY(-1px);
+}
+
+.stDownloadButton > button {
+    border-radius: 15px;
+    border: 1px solid rgba(203, 213, 225, .34);
+    background: linear-gradient(135deg, #334155, #1e293b);
+    color: white;
+    font-weight: 800;
+    min-height: 44px;
+    box-shadow: 0 8px 18px rgba(0,0,0,.20);
+}
+
+.stDownloadButton > button:hover {
+    border-color: #93c5fd;
+    color: white;
+    box-shadow: 0 0 20px rgba(59, 130, 246, .28);
+}
 
 div[data-testid="stFileUploader"] {
     background: rgba(15, 23, 42, .72);
